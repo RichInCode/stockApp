@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Stock Checker</title>
+		<link rel="stylesheet" type=text/css href='{{ url_for('static',filename='style.css') }}'>
+	</head>
+	<body>
+		<div class=page>
+  		  <h1>User Input</h1>
+		 
+		  <div class=metanav>
+		    <h2>Please enter a stock ticker eg. GOOG.</h2>
+		    <form id='userinfoform' action='index' method='post'>
+		      <p>
+			Ticker symbol <input type='text' name='name_stock' />
+		      </p>
+		      <h2>Select the desired feature</h2>
+		      <p>
+			Closing price <input type='radio' name='button' value='4' checked/>
+		      </p>
+		      <p>
+			Adjusted closing price <input type='radio' name='button' value='11' />
+		      </p>
+		      <p>
+			Volume <input type='radio' name='button' value='5' />
+		      </p>
+		      <p>
+		      <h2>Select the time range</h2>
+			Last month <input type='radio' name='timespan' value='1' checked/>
+		      </p>
+		      <p>
+			Last year <input type='radio' name='timespan' value='12' />
+		      </p>
+		      <p>
+			All time <input type='radio' name='timespan' value='-1' />
+		      </p>
+		      <h2>Select the time resolution</h2>
+		      <p>
+			Daily <input type='radio' name='timeres' value='daily' checked/>
+		      </p>
+		      <p>
+			Weekly <input type='radio' name='timeres' value='weekly' />
+		      </p>
+		      <p>
+			Monthly <input type='radio' name='timeres' value='monthly' />
+		      </p>
+                      <h2>(Optional) Enter a second stock ticker to compare</h2>
+                      <p>
+                         Ticker symbol <input type='text' name='name_stock_second' />
+		      </p>
+		      <p>
+			<input type='submit' value='Submit' />
+		      </p>
+		      </form>
+                   </div>
+		</div>
+	</body>
+</html>
