@@ -52,7 +52,7 @@ def plotData(df):
   #data = dict(somevalue=values, Date=dates)
   #p = TimeSeries(data, index='Date', title=app.vars['name_stock'], ylabel=app.vars[app.vars['button']])
 
-  p = figure(width=800, height=400, x_axis_type="datetime", title="Stock Ticker Information")
+  p = figure(width=800, height=500, x_axis_type="datetime", title="Stock Ticker Information")
   p.xaxis.axis_label = 'date'
   p.yaxis.axis_label = app.vars[app.vars['button']]
   p.line(dates, values, color='navy', alpha=0.5)
@@ -81,7 +81,7 @@ def plotData2(df, df2):
 #  data.columns[2] = app.vars['names_stock_second']
 #  p = TimeSeries(data, index='Date', title=app.vars['name_stock']+' and '+app.vars['name_stock_second'], ylabel=app.vars[app.vars['button']], legend=True, xlabel='date', width=800, height=400)
 
-  p = figure(width=800, height=400, x_axis_type="datetime", title="Stock Ticker Information")
+  p = figure(width=800, height=500, x_axis_type="datetime", title="Stock Ticker Information")
   p.xaxis.axis_label = 'date'
   p.yaxis.axis_label = app.vars[app.vars['button']]
   p.line(dates, values, color='navy', alpha=0.5)
