@@ -75,20 +75,20 @@ def plotData2(df, df2):
 
   output_file("templates/datetime.html")
 
-#  data = pandas.DataFrame(dict(stock1=values, Date=dates, stock2=values2))
+  data = pandas.DataFrame(dict(stock1=values, Date=dates, stock2=values2))
 #  col_names = [app.vars['name_stock'], 'Date', app.vars['name_stock_second']]
 #  data.columns[0] = app.vars['name_stock']
 #  data.columns[2] = app.vars['names_stock_second']
-#  p = TimeSeries(data, index='Date', title=app.vars['name_stock']+' and '+app.vars['name_stock_second'], ylabel=app.vars[app.vars['button']], legend=True, xlabel='date', width=800, height=400)
+  p = TimeSeries(data, index='Date', title=app.vars['name_stock']+' and '+app.vars['name_stock_second'], ylabel=app.vars[app.vars['button']], legend=True, xlabel='date', width=800, height=400)
 
-  p = figure(width=800, height=400, x_axis_type="datetime", title="Stock Ticker Information")
-  p.xaxis.axis_label = 'date'
-  p.yaxis.axis_label = app.vars[app.vars['button']]
-  p.line(dates, values, color='navy', alpha=0.5)
-  p.circle(dates, values, color='navy', alpha=0.5, legend=app.vars['name_stock'])
-  p.line(dates2, values2, color='red', alpha=0.5)
-  p.circle(dates2, values2, color='red', alpha=0.5, legend=app.vars['name_stock_second'])
-#  p.circle(dates2, values2, color='red', alpha=0.5)
+#  p = figure(width=800, height=250, x_axis_type="datetime", title="Stock Ticker Information")
+#  p.xaxis.axis_label = 'date'
+#  p.yaxis.axis_label = app.vars[app.vars['button']]
+#  p.line(dates, values, color='navy', alpha=0.5)
+#  p.circle(dates, values, color='navy', alpha=0.5, legend=app.vars['name_stock'])
+#  p.line(dates2, values2, color='red', alpha=0.5)
+#  p.circle(dates2, values2, color='red, alpha=0.5, legend=app.vars['name_stock_second'])
+  #p.circle(dates2, values2, color='red, alpha=0.5)
 
   save(p)
 
